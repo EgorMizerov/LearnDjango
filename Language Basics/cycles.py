@@ -14,6 +14,7 @@ while i < len(lst):
     print(lst[i])
     i += 1
 
+
 # Цикл For
 print("Цикл for по списку")
 for i in lst:
@@ -22,3 +23,21 @@ for i in lst:
 print("Цикл for по словарю")
 for key, value in kw.items():
     print("Номер телефона %s - %s" % (key, value))
+
+
+# Операторы break, continue и pass
+print("Цикл с операторами")
+for i in rg1:
+    if i == 0:
+        # Ничего не происходит
+        pass
+    if i == 2:
+        print("Число 2 пропускаем")
+        # Пропускается иттерация
+        continue
+    if i == 4:
+        print("4 - конечное число")
+        # Заканчивается цикл
+        break
+
+    print(i)
