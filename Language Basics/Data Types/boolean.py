@@ -31,3 +31,6 @@ f9 = 10 >= 9    # False
 t11 = 10 != 9  # True
 f10 = 10 == 9  # False
 
+t12 = True is not False  # True
+
+t13 = "a" in ["a", "b", "c"]  # True
