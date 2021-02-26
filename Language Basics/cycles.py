@@ -16,17 +16,17 @@ while i < len(lst):
 
 
 # Цикл For
-print("Цикл for по списку")
+print("\nЦикл for по списку")
 for i in lst:
     print(i)
 
-print("Цикл for по словарю")
+print("\nЦикл for по словарю")
 for key, value in kw.items():
     print("Номер телефона %s - %s" % (key, value))
 
 
 # Операторы break, continue и pass
-print("Цикл с операторами")
+print("\nЦикл с операторами")
 for i in rg1:
     if i == 0:
         # Ничего не происходит
@@ -40,4 +40,21 @@ for i in rg1:
         # Заканчивается цикл
         break
 
+    print(i)
+
+# Цикл for по enumerate
+print("\nЦикл for по enumerate")
+for i, v in enumerate(['itc', 'tac', 'toe']):
+    print(i, v)
+
+# Цикл for по нескольким спискам
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+print("\nЦикл for по нескольким спискам")
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
+
+# Перебор последовательности в обратном порядке
+print("\nПеребор последовательности в обратном порядке")
+for i in reversed(range(1, 10, 2)):
     print(i)
