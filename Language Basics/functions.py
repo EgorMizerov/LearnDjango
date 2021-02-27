@@ -58,3 +58,31 @@ cheese_shop('Hello', 1, True, name="Egor", age=18)
 f(1, 2, pos_or_kwd=3, kwd1=5, kwd2=20)
 print(pow_x_y(4, 2))
 print(people_str.__annotations__)
+
+
+def scope_test():
+    def do_local():
+        # Не видна из вне
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        # Видна внтури функции
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        # Видна изнутри
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+
+scope_test()
+print("In global scope:", spam)
